@@ -1,0 +1,78 @@
+.about-company {
+  &__container {
+    @include adaptiv-value("margin-top", 30, 10, 0);
+    // margin-top: 72px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 33px;
+  }
+
+  &__title {
+    /* О компании */
+    text-align: center;
+    font-weight: 700;
+    @include adaptiv-value("font-size", 42, 21, 0);
+    @include adaptiv-value("line-height", 51, 0, 0);
+    @include adaptiv-value("margin-top", 21, 0, 0);
+    // font-size: 42px;
+    // line-height: 51px;
+    // margin-top: 21px;
+    a {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-areas:
+      "texted image"
+      "button image";
+    grid-gap: 10px;
+    /* padding: 10px; */
+    justify-items: center;
+    align-items: center;
+    @include adaptiv-value("margin-top", 86, 30, 0);
+    // margin-top: 86px;
+    @media (max-width: 990px) {
+      grid-template-areas:
+        "image"
+        "texted"
+        "button";
+    }
+  }
+
+  &__text {
+    grid-area: texted;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    @include adaptiv-value("font-size", 24, 12, 0);
+    @include adaptiv-value("line-height", 29, 17, 0);
+    // font-size: 24px;
+    // line-height: 29px;
+  }
+
+  &__button {
+    grid-area: button;
+    @include adaptiv-value("margin-top", 24, -35, 0);
+    // margin-top: 24px;
+    margin-bottom: 39px;
+  }
+
+  &__img {
+    grid-area: image;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+}
+
+.btn {
+}
+.btn-idea {
+}

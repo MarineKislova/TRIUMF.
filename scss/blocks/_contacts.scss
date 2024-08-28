@@ -1,0 +1,64 @@
+.contacts {
+  &__container {
+    @include adaptiv-value("margin-top", 38, 0, 0);
+    // margin-top: 38px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 33px;
+  }
+
+  &__title {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    @include adaptiv-value("font-size", 42, 23, 0);
+    @include adaptiv-value("line-height", 51, 33, 0);
+    // font-size: 42px;
+    // line-height: 51px;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  &__body {
+    color: rgba(255, 255, 255, 1);
+    display: grid;
+    grid-template-areas: "adress map";
+    justify-content: space-evenly;
+    // flex-grow: 1 1 auto;
+    @include adaptiv-value("margin-top", 77, 17, 0);
+    // margin-top: 77px;
+
+    @media (max-width: 990px) {
+      grid-template-areas:
+        "adress"
+        "map";
+    }
+  }
+
+  &__adress {
+    grid-area: adress;
+    font-weight: 500;
+    @include adaptiv-value("font-size", 24, 15, 0);
+    @include adaptiv-value("line-height", 29, 20, 0);
+    
+    // font-size: 24px;
+    // line-height: 29px;
+  }
+
+  &__map {
+    grid-area: map;
+
+    iframe{
+      @include adaptiv-value("width", 650, 250, 0);
+      @include adaptiv-value("height", 450, 150, 0);
+      // width: 650px;
+      // height: 450px;
+      border: none;
+    }
+  }
+}

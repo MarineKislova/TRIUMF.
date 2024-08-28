@@ -1,0 +1,16 @@
+
+#dependenies
+/node_modules
+/.pnp
+.pnp.js
+
+#testing
+/coverage
+
+#pruduction
+/build
+
+#other
+.eslintrc.js
+*.fig
+*.txt

@@ -1,0 +1,19 @@
+.footer {
+  &__container {
+  }
+  &__title {
+    padding: 54px 0px 79px 33px;
+  }
+}
+
+.triumf {
+  a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    // font-size: 56px;
+    // line-height: 68px;
+    @include adaptiv-value("font-size", 56, 18, 0);
+    @include adaptiv-value("line-height", 68, 25, 0);
+    cursor: pointer;
+  }
+}

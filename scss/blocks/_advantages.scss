@@ -1,0 +1,71 @@
+.advantages {
+  &__container {
+    @include adaptiv-value("margin-top", 91, 21, 0);
+    // margin-top: 91px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/advantages/advantage.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: unset;
+    background-size: cover;
+    padding: 0px 33px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    @include adaptiv-value("font-size", 42, 23, 0);
+    @include adaptiv-value("line-height", 51, 33, 0);
+    // font-size: 42px;
+    // line-height: 51px;
+    text-align: center;
+    padding: 68px 0px 27px 0px;
+    a {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-grow: 1 1 auto;
+    @include adaptiv-value("padding-bottom", 86, 6, 0);
+    // padding-bottom: 86px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1 1 auto;
+    @include adaptiv-value("width", 292, 192, 0);
+    @include adaptiv-value("height", 233, 200, 0);
+    // width: 292px;
+    // height: 233px;
+    border-radius: 5%;
+
+    background: rgba(24, 23, 21, 0.6);
+
+    img {
+      width: 100%;
+      aspect-ratio: auto 177.777778%; /* 16/9 */
+    }
+    h3 {
+      color: rgba(255, 255, 255, 1);
+      margin-top: 8px;
+      @include adaptiv-value("font-weight", 500, 700, 0);
+      @include adaptiv-value("font-size", 28, 9, 0);
+      @include adaptiv-value("line-height", 34, 16, 0);
+      // font-weight: 500;
+      // font-size: 28px;
+      // line-height: 34px;
+      /* identical to box height */
+      text-align: center;
+    }
+  }
+}
