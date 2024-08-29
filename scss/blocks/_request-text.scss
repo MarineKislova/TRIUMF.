@@ -1,0 +1,19 @@
+.request-text {
+    
+  p {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    @include adaptiv-value("font-size", 24, 15, 0);
+    @include adaptiv-value("line-height", 29, 16, 0);
+    // font-size: 24px;
+    // line-height: 29px;
+    text-align: center;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-evenly;
+    @include adaptiv-value("margin-top", 50, -50, 0);
+    // margin-top: 50px;
+  }
+}

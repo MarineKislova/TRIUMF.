@@ -8,11 +8,13 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 
   &__content {
-    max-width: 870px;
-    max-height: 748px;
+    @include adaptiv-value("max-width", 870, 300, 0);
+    @include adaptiv-value("max-height", 748, 550, 0);
+    // max-width: 870px;
+    // max-height: 748px;
     margin: 0px auto;
     position: relative;
     display: flex;
@@ -31,27 +33,37 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
-    width: 348px;
-    height: 648px;
+    @include adaptiv-value("max-width", 870, 290, 0);
+    @include adaptiv-value("max-height", 748, 390, 0);
+    // width: 348px;
+    // height: 648px;
     background-image: url(../img/modal/1.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     background-size: cover;
     p {
+      color: rgba(255, 255, 255, 1);
       padding-left: 31px;
       padding-bottom: 15px;
       font-weight: 500;
-      font-size: 16px;
-      line-height: 20px;
+      @include adaptiv-value("font-size", 16, 9, 0);
+      @include adaptiv-value("line-height", 20, 12, 0);
+      // font-size: 16px;
+      // line-height: 20px;
+      @media (max-width:720px) {
+        display: none;
+      }
     }
   }
 
   &__forma {
+    @include adaptiv-value("max-height", 748, 390, 0);
     max-height: 748px;
     display: flex;
     flex-direction: column;
     margin: 0px auto;
+    @include adaptiv-value("max-width", 434, 290, 0);
     width: 434px;
   }
 
@@ -59,7 +71,8 @@
     position: absolute;
     top: 8px;
     right: 14px;
-    font-size: 30px;
+    @include adaptiv-value("font-size", 30, 20, 0);
+    // font-size: 30px;
     color: #f6f3f3;
     opacity: 0.5;
     font-weight: 700;
@@ -70,34 +83,43 @@
 
   &__title {
     text-align: center;
-    font-size: 22px;
+    @include adaptiv-value("font-size", 22, 12, 0);
+    // font-size: 22px;
     text-transform: uppercase;
   }
 
   &__input {
     margin: 22px auto;
-    width: 434px;
+    @include adaptiv-value("max-width", 434, 290, 0);
+    // width: 434px;
+    @include adaptiv-value("height", 42, 22, 0);
     height: 42px;
     padding: 0 20px;
     // border: none;
     text-align: center;
     font-size: small;
+    @include adaptiv-value("opacity", 0.6, 0.8, 0);
     opacity: 0.6;
     outline: invert;
     border: 3px solid #ffffff;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
+    @include adaptiv-value("font-size", 20, 9, 0);
+    @include adaptiv-value("line-height", 24, 16, 0);
+    // font-size: 20px;
+    // line-height: 24px;
 
     &:nth-child(6) {
-      height: 77px;
+      @include adaptiv-value("height", 77, 42, 0);
+      // height: 77px;
     }
   }
 
   &__pesonaldata {
     font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
+    @include adaptiv-value("font-size", 15, 9, 0);
+    @include adaptiv-value("line-height", 18, 12, 0);
+    // font-size: 15px;
+    // line-height: 18px;
     color: #ffffff;
     margin-bottom: 64px;
   }
