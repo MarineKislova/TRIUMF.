@@ -520,96 +520,94 @@
       <!-- Request -->
       <div class="request">
         <div class="request__container">
-
-            <div class="request__title">
-              Оставьте заявку и мы расчитаем стоимость <br />
-              изделия в кратчайшие сроки
+          <div class="request__title">
+            Оставьте заявку и мы расчитаем стоимость <br />
+            изделия в кратчайшие сроки
+          </div>
+          <form class="request__forma" action="#">
+            <input
+              required
+              placeholder="Ваше имя"
+              name="name"
+              type="text"
+              maxlength="30"
+              class="request__input"
+            />
+            <input
+              required
+              placeholder="Ваше телефон"
+              name="phoneNumber"
+              type="tel"
+              maxlength="13"
+              class="request__input"
+            />
+            <input
+              required
+              placeholder="Введите Ваш e-mail"
+              name="mail"
+              type="email"
+              class="request__input"
+            />
+            <input
+              required
+              placeholder="Комментарий"
+              name="comment"
+              type="text"
+              maxlength="20"
+              class="request__input"
+            />
+            <div class="request__personaldata">
+              Нажимая на кнопку "Отправить", Вы даете согласие на обработку
+              персональных данных
             </div>
-            <form class="request__forma" action="#">
-              <input
+            <div class="request__btns">
+              <button
                 required
-                placeholder="Ваше имя"
-                name="name"
-                type="text"
-                maxlength="30"
-                class="request__input"
-              />
-              <input
-                required
-                placeholder="Ваше телефон"
-                name="phoneNumber"
-                type="tel"
-                maxlength="13"
-                class="request__input"
-              />
-              <input
-                required
-                placeholder="Введите Ваш e-mail"
-                name="mail"
-                type="email"
-                class="request__input"
-              />
-              <input
-                required
-                placeholder="Комментарий"
-                name="comment"
-                type="text"
-                maxlength="20"
-                class="request__input"
-              />
-              <div class="request__personaldata">
-                Нажимая на кнопку "Отправить", Вы даете согласие на обработку
-                персональных данных
-              </div>
-              <div class="request__btns">
-                <button
-                  required
-                  data-closerequestform
-                  type="submit"
-                  class="btn btn-idea"
-                >
-                  Оставить заявку
-                </button>
-              </div>
-            </form>
-          
+                data-closerequestform
+                type="submit"
+                class="btn btn-idea"
+              >
+                Оставить заявку
+              </button>
+            </div>
+          </form>
         </div>
       </div>
       <!-- END Request -->
 
       <!-- ModalRequest-->
-      <!-- <div class="modal-request">
-          <div class="modal-request__content">
-            <div class="modal-request__contact">
-              <p>
-                г. Нур-Султан, ул. <br />
-                Тлендиева 24 <br />металлоцех бокс 1,2 <br />ватсап
-                <span>+77071093609</span>
-                <br />
-                телефон <span>+77074449968</span>
-              </p>
+      <div class="modal-request">
+        <div class="modal-request__content">
+          <div class="modal-request__contact">
+            <p>
+              г. Нур-Султан, ул. <br />
+              Тлендиева 24 <br />металлоцех бокс 1,2 <br />ватсап
+              <span>+77071093609</span>
+              <br />
+              телефон <span>+77074449968</span>
+            </p>
+          </div>
+          <div class="modal-request__body">
+            <div data-closefeedbackform class="modal-request__close">
+              &times;
             </div>
-            <div class="modal-request__body">
-              <div data-closerequestform class="modal-request__close">
-                &times;
-              </div>
-              <div class="modal-request__title">
-                Спасибо за ваш <br />
-                заказ
-              </div>
-              <div class="modal-request__text">
-                <p>
-                  В самое ближайшее время мы <br />свяжемся с Вами и обсудим
-                  заказ!
-                </p>
-                <p>С уважением,<br />команда ТРИУМФ</p>
-              </div>
+            <div class="modal-request__title">
+              Спасибо за ваш <br />
+              заказ
+            </div>
+            <div class="modal-request__text">
+              <p>
+                В самое ближайшее время мы <br />свяжемся с Вами и обсудим
+                заказ!
+              </p>
+              <p>С уважением,<br />команда ТРИУМФ</p>
             </div>
           </div>
-        </div> -->
+        </div>
+      </div>
       <!-- END ModalRequest -->
     </div>
 
-    <script src="js/index.js"></script>
+    <script src="js/bundle.js"></script>
   </body>
 </html>

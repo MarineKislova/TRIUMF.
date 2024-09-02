@@ -1,4 +1,5 @@
-window.addEventListener("DOMContentLoaded", () => {
+function catalog(){
+  
   //catalog
   const tablinksCatalog = document.querySelectorAll(".tablink");
   const tabContentCatalog = document.querySelectorAll(".catalog__content");
@@ -678,4 +679,7 @@ window.addEventListener("DOMContentLoaded", () => {
     "#other",
     "#other .catalog__content_body"
   ).renderCatalog();
-});
+}
+
+export default catalog;
+

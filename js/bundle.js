@@ -1,4 +1,19 @@
-window.addEventListener("DOMContentLoaded", () => {
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./js/modules/catalog.js":
+/*!*******************************!*\
+  !*** ./js/modules/catalog.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function catalog(){
+  
   //catalog
   const tablinksCatalog = document.querySelectorAll(".tablink");
   const tabContentCatalog = document.querySelectorAll(".catalog__content");
@@ -49,11 +64,11 @@ window.addEventListener("DOMContentLoaded", () => {
       const imagesCatalog = document.createElement("div");
 
       imagesCatalog.innerHTML = `
-  
-        <div class="catalog__content_image" id="${this.id}">
-        <img src="${this.src}" alt="${this.alt}"" />
-        
-        `;
+
+      <div class="catalog__content_image" id="${this.id}">
+      <img src="${this.src}" alt="${this.alt}"" />
+      
+      `;
       this.parentCard.append(imagesCatalog);
     }
   }
@@ -678,54 +693,165 @@ window.addEventListener("DOMContentLoaded", () => {
     "#other",
     "#other .catalog__content_body"
   ).renderCatalog();
+}
 
-  //modalForm
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (catalog);
 
-  function modalWindow({ openSelector, closeSelector, parentSelector }) {
-    let openModal = document.querySelectorAll(openSelector);
-    let closeModal = document.querySelectorAll(closeSelector); //закомментировано для динамического формирования
-    let parentModal = document.querySelector(parentSelector);
 
-    function showModal() {
-      parentModal.style.display = "block";
-    }
 
-    openModal.forEach((item) => {
-      item.addEventListener("click", showModal);
-    });
+/***/ }),
 
-    function hideModal() {
-      parentModal.style.display = "none";
-    }
+/***/ "./js/modules/modalwindow.js":
+/*!***********************************!*\
+  !*** ./js/modules/modalwindow.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-    closeModal.forEach((item) => {
-      item.addEventListener("click", hideModal);
-    });
-    // showModalOne();
-    // hideModalOne();
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function modalWindow({ openSelector, closeSelector, parentSelector}) {
+  let openModal = document.querySelectorAll(openSelector);
+  let closeModal = document.querySelectorAll(closeSelector); //закомментировано для динамического формирования
+  let parentModal = document.querySelector(parentSelector);
 
-    parentModal.addEventListener("click", (e) => {
-      if (e.target === parentModal) {
-        hideModal();
-      }
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.code === "Escape") {
-        hideModal();
-      }
-    });
+  function showModal() {
+    parentModal.style.display = "block";
   }
 
-  modalWindow({
+  openModal.forEach((item) => {
+    item.addEventListener("click", showModal);
+  });
+
+  function hideModal() {
+    parentModal.style.display = "none";
+  }
+
+  let timerID = setTimeout(hideModal, 3000);
+
+  closeModal.forEach((item) => {
+    item.addEventListener("click", hideModal);
+  });
+  // showModalOne();
+  // hideModalOne();
+
+  parentModal.addEventListener("click", (e) => {
+    if (e.target === parentModal) {
+      hideModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.code === "Escape") {
+      hideModal();
+    }
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modalWindow);
+
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+/*!**********************!*\
+  !*** ./js/script.js ***!
+  \**********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_catalog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/catalog */ "./js/modules/catalog.js");
+/* harmony import */ var _modules_modalwindow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modalwindow */ "./js/modules/modalwindow.js");
+
+
+
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  (0,_modules_catalog__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  // modalWindow();
+  // modalForm();
+
+  (0,_modules_modalwindow__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    openSelector: "[data-openform]",
+    closeSelector: "[data-closeform]",
+    parentSelector: ".modal-form",
+  });
+
+  (0,_modules_modalwindow__WEBPACK_IMPORTED_MODULE_1__["default"])({
     openSelector: "[data-openrequestform]",
     closeSelector: "[data-closerequestform]",
     parentSelector: ".request",
   });
 
-  modalWindow({
-    openSelector: "[data-openform]",
-    closeSelector: "[data-closeform]",
-    parentSelector: ".modal-form",
+  (0,_modules_modalwindow__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    openSelector: "[data-closerequestform]",
+    closeSelector: "[data-closefeedbackform ]",
+    parentSelector: ".modal-request",
+  });
+
+  (0,_modules_modalwindow__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    openSelector: "[data-openrequestform]",
+    closeSelector: "[data-closerequestform]",
+    parentSelector: ".request",
   });
 });
+
+/******/ })()
+;
+//# sourceMappingURL=bundle.js.map
