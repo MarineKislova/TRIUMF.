@@ -589,8 +589,10 @@ h6 {
   width: 100%;
 }
 
-.request-text p {
+.request-text__container {
   color: rgb(255, 255, 255);
+}
+.request-text p {
   font-weight: 500;
   font-size: calc(15px + 9 * (100vw - 320px) / 1600);
   line-height: calc(16px + 13 * (100vw - 320px) / 1600);
@@ -603,7 +605,7 @@ h6 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-top: calc(-50px + 100 * (100vw - 320px) / 1600);
+  margin-top: calc(10px + 40 * (100vw - 320px) / 1600);
 }
 
 .request {
@@ -638,6 +640,18 @@ h6 {
   background-color: rgb(30, 29, 29);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+.request__close {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  font-size: calc(20px + 10 * (100vw - 320px) / 1600);
+  color: #f6f3f3;
+  opacity: 0.5;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 .request__title {
   color: rgb(255, 255, 255);
@@ -701,6 +715,7 @@ h6 {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .modal-form__content {
+  color: rgb(255, 255, 255);
   max-width: calc(300px + 570 * (100vw - 320px) / 1600);
   max-height: calc(550px + 198 * (100vw - 320px) / 1600);
   margin: 0px auto;

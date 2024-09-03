@@ -32,6 +32,20 @@
     // overflow-y: auto;
   }
 
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    @include adaptiv-value("font-size", 30, 20, 0);
+    // font-size: 30px;
+    color: #f6f3f3;
+    opacity: 0.5;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
   &__title {
     color: rgba(255, 255, 255, 1);
     font-weight: 500;

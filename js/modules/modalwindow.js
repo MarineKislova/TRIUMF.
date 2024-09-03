@@ -15,7 +15,6 @@ function modalWindow({ openSelector, closeSelector, parentSelector}) {
     parentModal.style.display = "none";
   }
 
-  let timerID = setTimeout(hideModal, 3000);
 
   closeModal.forEach((item) => {
     item.addEventListener("click", hideModal);

@@ -1,7 +1,9 @@
 .request-text {
-    
-  p {
+  &__container {
     color: rgba(255, 255, 255, 1);
+  }
+
+  p {
     font-weight: 500;
     @include adaptiv-value("font-size", 24, 15, 0);
     @include adaptiv-value("line-height", 29, 16, 0);
@@ -13,7 +15,7 @@
   &__btns {
     display: flex;
     justify-content: space-evenly;
-    @include adaptiv-value("margin-top", 50, -50, 0);
+    @include adaptiv-value("margin-top", 50, 10, 0);
     // margin-top: 50px;
   }
 }
